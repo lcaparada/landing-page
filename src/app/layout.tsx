@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/providers";
+import { NavBar } from "@/components";
 
 const ibmPlexSans = IBM_Plex_Sans({
   subsets: ["latin"],
@@ -8,7 +10,7 @@ const ibmPlexSans = IBM_Plex_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Elevante Software",
+  title: "Temp code",
   description: "Transformamos ideias em software",
 };
 
@@ -18,9 +20,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${ibmPlexSans.className}  antialiased`}>
-        {children}
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={`${ibmPlexSans.className}  w-full px-52 bg-background text-foreground  antialiased`}
+      >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <NavBar />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
