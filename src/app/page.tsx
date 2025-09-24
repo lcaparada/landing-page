@@ -1,4 +1,4 @@
-import { Button } from "@/components";
+import { Button, VSCode } from "@/components";
 
 export default function Home() {
   return (
@@ -16,18 +16,7 @@ export default function Home() {
           </p>
           <Button size={"lg"}>Send me a message</Button>
         </div>
-        <div className="space-y-8">
-          <h1 className="text-2xl font-medium">
-            Soluções tecnológicas que transformam sua empresa e{" "}
-            <span className="text-brand">potencializam seus resultados.</span>
-          </h1>
-          <p className="text-sm font-regular">
-            Aplicando as tecnologias mais avançadas do mercado, desenvolvemos
-            soluções personalizadas para atender às suas necessidades e
-            impulsionar o seu sucesso.
-          </p>
-          <Button size={"lg"}>Send me a message</Button>
-        </div>
+        <VSCode />
       </section>
     </main>
   );

@@ -19,6 +19,7 @@
     --yellow-brand: #F5BE4F;
     --vs-code-1: #25292F;
     --vs-code-2: #202428;
+    --vs-code-number: #6D6D6D;
   }
 }
 
@@ -27,7 +28,8 @@
   --color-foreground: var(--foreground);
   --color-brand: var(--brand);
   --color-red-brand: var(--red-brand);
-  --color-yellow: var(--yellow-brand);
+  --color-green-brand: var(--green-brand);
+  --color-yellow-brand: var(--yellow-brand);
   --color-vs-code-1: var(--vs-code-1);
   --color-vs-code-2: var(--vs-code-2);
 }
