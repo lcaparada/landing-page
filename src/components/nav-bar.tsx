@@ -8,7 +8,7 @@ export const NavBar = () => {
   ];
 
   return (
-    <nav className="pb-6 pt-12 bg-background items-center flex fixed right-0 px-52  justify-between w-full">
+    <nav className="pb-6 z-50 pt-12 bg-background items-center flex fixed right-0 px-52  justify-between w-full">
       <h1 className="text-2xl">
         ELEVANTE <span className="text-brand">Software</span>
       </h1>
