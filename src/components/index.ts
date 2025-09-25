@@ -6,6 +6,7 @@ export * from "./nav-bar";
 export * from "./section/section-one";
 export * from "./section/section-two";
 export * from "./section/section-four";
+export * from "./section/section-five";
 export * from "./section/section-three";
 
 // ICONS

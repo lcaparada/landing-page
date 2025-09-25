@@ -1,4 +1,5 @@
 import {
+  SectionFive,
   SectionFour,
   SectionOne,
   SectionThree,
@@ -20,18 +21,7 @@ export default function Home() {
       <SectionTwo id={slugify("Sobre")} />
       <SectionThree id={slugify("Avaliações")} />
       <SectionFour id={slugify("Projetos")} />
-      <section
-        id={slugify("Serviços")}
-        className="flex items-center justify-center gap-x-8 h-dvh"
-      >
-        <div className="max-w-4xl text-center">
-          <h2 className="text-3xl text-brand font-semibold mb-6">Serviços</h2>
-          <p className="text-base">
-            Oferecemos desenvolvimento web, mobile, design e consultoria para
-            transformar ideias em produtos reais.
-          </p>
-        </div>
-      </section>
+      <SectionFive id={slugify("Serviços")} />
     </main>
   );
 }
