@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${ibmPlexSans.className}  w-full px-52 bg-background text-foreground  antialiased`}
+        className={`${ibmPlexSans.className}  w-full px-52 pb-9 bg-background text-foreground  antialiased`}
       >
         <ThemeProvider
           attribute="class"

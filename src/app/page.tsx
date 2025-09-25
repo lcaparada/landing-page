@@ -1,4 +1,9 @@
-import { SectionOne, SectionThree, SectionTwo } from "@/components";
+import {
+  SectionFour,
+  SectionOne,
+  SectionThree,
+  SectionTwo,
+} from "@/components";
 
 export default function Home() {
   return (
@@ -6,6 +11,7 @@ export default function Home() {
       <SectionOne />
       <SectionTwo />
       <SectionThree />
+      <SectionFour />
     </main>
   );
 }

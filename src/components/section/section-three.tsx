@@ -93,7 +93,7 @@ export const SectionThree: React.FC = () => {
       onViewportLeave={() => setInView(false)}
       transition={{ duration: 0.8 }}
     >
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-4 items-center flex flex-col">
         <h2 className="text-3xl text-brand font-semibold mb-6">
           O que nossos clientes dizem?
         </h2>
@@ -112,7 +112,7 @@ export const SectionThree: React.FC = () => {
               {REVIEWS.map((r) => (
                 <article
                   key={r.id}
-                  className="w-fit bg-background border   rounded-xl shadow-md p-6 flex-shrink-0"
+                  className="w-fit bg-background border rounded-xl shadow-md p-6 flex-shrink-0"
                 >
                   <div className="flex items-center justify-between mb-3">
                     <div className="font-medium">{r.name}</div>
