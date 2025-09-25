@@ -10,7 +10,7 @@ const ibmPlexSans = IBM_Plex_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Temp code",
+  title: "Elevante Software",
   description: "Transformamos ideias em software",
 };
 
