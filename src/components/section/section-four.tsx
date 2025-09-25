@@ -35,9 +35,14 @@ const PROJECTS = [
   },
 ];
 
-export const SectionFour = () => {
+type SectionFourProps = {
+  id?: string;
+};
+
+export const SectionFour = ({ id }: SectionFourProps) => {
   return (
     <motion.section
+      id={id}
       className="flex items-center flex-col justify-center  gap-y-8 h-dvh"
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}

@@ -21,9 +21,16 @@ const item = {
   },
 };
 
-export const SectionTwo = () => {
+type SectionTwoProps = {
+  id?: string;
+};
+
+export const SectionTwo = ({ id }: SectionTwoProps) => {
   return (
-    <section className="flex items-center justify-center  gap-x-8 h-dvh">
+    <section
+      id={id}
+      className="flex items-center justify-center  gap-x-8 h-dvh"
+    >
       <motion.div
         className="flex-shrink-0"
         initial={{ opacity: 0, y: 24 }}

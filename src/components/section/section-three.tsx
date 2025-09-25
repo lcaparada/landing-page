@@ -49,7 +49,11 @@ const REVIEWS: Review[] = [
   },
 ];
 
-export const SectionThree: React.FC = () => {
+type SectionThreeProps = {
+  id?: string;
+};
+
+export const SectionThree: React.FC<SectionThreeProps> = ({ id }) => {
   const trackRef = useRef<HTMLDivElement | null>(null);
   const [singleWidth, setSingleWidth] = useState<number>(0);
   const [inView, setInView] = useState<boolean>(false);
@@ -85,6 +89,7 @@ export const SectionThree: React.FC = () => {
 
   return (
     <motion.section
+      id={id}
       className="flex items-center justify-center  gap-x-8 h-dvh"
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}

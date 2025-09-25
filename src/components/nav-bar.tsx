@@ -1,3 +1,5 @@
+"use client";
+
 export const NavBar = () => {
   const informations = [
     "Início",
@@ -6,6 +8,22 @@ export const NavBar = () => {
     "Projetos",
     "Serviços",
   ];
+
+  const slugify = (s: string) =>
+    s
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/\p{Diacritic}/gu, "")
+      .replace(/\s+/g, "-")
+      .replace(/[^\w-]/g, "");
+
+  const handleClick = (label: string) => {
+    const id = slugify(label);
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
   return (
     <nav className="pb-6 z-50 pt-12 bg-background items-center flex fixed right-0 px-52  justify-between w-full">
@@ -16,6 +34,7 @@ export const NavBar = () => {
         {informations.map((info, index) => (
           <button
             key={index}
+            onClick={() => handleClick(info)}
             className="relative group cursor-pointer font-medium text-lg text-left focus:outline-none"
             aria-label={info}
           >

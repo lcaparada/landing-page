@@ -4,9 +4,14 @@ import { Button } from "../button";
 import { VSCode } from "../vs-code";
 import { motion } from "framer-motion";
 
-export const SectionOne = () => {
+type SectionOneProps = {
+  id?: string;
+};
+
+export const SectionOne = ({ id }: SectionOneProps) => {
   return (
     <motion.section
+      id={id}
       className="flex items-center justify-center  gap-x-8 h-dvh"
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
