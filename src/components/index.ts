@@ -1,6 +1,7 @@
 export * from "./button";
 export * from "./vs-code";
 export * from "./nav-bar";
+export * from "./footer";
 
 // SECTION
 export * from "./section/section-one";

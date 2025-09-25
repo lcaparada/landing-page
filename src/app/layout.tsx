@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/providers";
-import { NavBar } from "@/components";
+import { Footer, NavBar } from "@/components";
 
 const ibmPlexSans = IBM_Plex_Sans({
   subsets: ["latin"],
@@ -32,6 +32,7 @@ export default function RootLayout({
         >
           <NavBar />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
