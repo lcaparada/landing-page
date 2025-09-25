@@ -14,7 +14,7 @@ export default function Home() {
             soluções personalizadas para atender às suas necessidades e
             impulsionar o seu sucesso.
           </p>
-          <Button size={"lg"}>Send me a message</Button>
+          <Button size={"lg"}>Fale conosco</Button>
         </div>
         <VSCode />
       </section>
