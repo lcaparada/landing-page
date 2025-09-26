@@ -9,6 +9,12 @@ type SectionOneProps = {
 };
 
 export const SectionOne = ({ id }: SectionOneProps) => {
+  const phone = "5521988126131";
+  const msg = encodeURIComponent(
+    "Olá! Quero mais informações sobre seus serviços."
+  );
+  const waUrl = `https://wa.me/${phone}?text=${msg}`;
+
   return (
     <motion.section
       id={id}
@@ -28,7 +34,9 @@ export const SectionOne = ({ id }: SectionOneProps) => {
           soluções personalizadas para atender às suas necessidades e
           impulsionar o seu sucesso.
         </p>
-        <Button size={"lg"}>Fale conosco</Button>
+        <a href={waUrl} target="_blank" rel="noopener noreferrer">
+          <Button size="lg">Fale conosco</Button>
+        </a>
       </div>
       <div className="hidden md:flex">
         <VSCode />
