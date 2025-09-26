@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 export const VSCode = () => {
   return (
-    <div className="rounded-md bg-vs-code-2 ml-14 w-full h-fit overflow-hidden">
+    <div className="rounded-md bg-vs-code-2 ml-14 w-[550px] h-fit overflow-hidden">
       <header className="p-5 flex bg-vs-code-1  items-center gap-x-2">
         <ActionButton className="bg-red-brand" />
         <ActionButton className="bg-yellow-brand" />
