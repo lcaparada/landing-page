@@ -29,7 +29,7 @@ export const SectionTwo = ({ id }: SectionTwoProps) => {
   return (
     <section
       id={id}
-      className="flex items-center justify-center  gap-x-8 h-dvh"
+      className="flex flex-col md:flex-row items-center justify-center gap-y-5 gap-x-8 md:h-dvh"
     >
       <motion.div
         className="flex-shrink-0"
@@ -38,17 +38,20 @@ export const SectionTwo = ({ id }: SectionTwoProps) => {
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.8 }}
       >
-        <Logo size={320} />
+        <Logo className="size-36 md:size-[300px]" />
       </motion.div>
 
       <motion.div
-        className="space-y-4 max-w-xl"
+        className="space-y-4 max-w-xl px-2 md:px-0"
         variants={container}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
       >
-        <motion.h1 className="text-3xl font-medium text-brand" variants={item}>
+        <motion.h1
+          className="text-lg md:text-3xl font-medium text-brand"
+          variants={item}
+        >
           Quem somos nós?
         </motion.h1>
 

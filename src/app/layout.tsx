@@ -20,9 +20,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="pt-BR" suppressHydrationWarning>
       <body
-        className={`${ibmPlexSans.className}  w-full px-52 pb-9 bg-background text-foreground  antialiased`}
+        className={`${ibmPlexSans.className}  w-full px-2 md:px-52  bg-background text-foreground  antialiased`}
       >
         <ThemeProvider
           attribute="class"

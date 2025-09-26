@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 
 type Review = {
@@ -54,84 +54,37 @@ type SectionThreeProps = {
 };
 
 export const SectionThree: React.FC<SectionThreeProps> = ({ id }) => {
-  const trackRef = useRef<HTMLDivElement | null>(null);
-  const [singleWidth, setSingleWidth] = useState<number>(0);
-  const [inView, setInView] = useState<boolean>(false);
-
-  const SPEED = 50;
-
-  useEffect(() => {
-    const el = trackRef.current;
-    if (!el) return;
-
-    const measure = () => {
-      const firstGroup = el.querySelector(
-        '[data-group="first"]'
-      ) as HTMLElement | null;
-      if (firstGroup) {
-        setSingleWidth(firstGroup.offsetWidth);
-      }
-    };
-
-    measure();
-
-    const ro = new ResizeObserver(measure);
-    ro.observe(el);
-    window.addEventListener("resize", measure);
-
-    return () => {
-      ro.disconnect();
-      window.removeEventListener("resize", measure);
-    };
-  }, []);
-
-  const duration = singleWidth ? singleWidth / SPEED : 10;
-
   return (
     <motion.section
       id={id}
-      className="flex items-center justify-center  gap-x-8 h-dvh"
+      className="flex flex-col items-center justify-center gap-x-8 md:h-dvh"
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.25 }}
-      onViewportEnter={() => setInView(true)}
-      onViewportLeave={() => setInView(false)}
       transition={{ duration: 0.8 }}
     >
-      <div className="max-w-6xl mx-auto px-4 items-center flex flex-col">
-        <h2 className="text-3xl text-brand font-semibold mb-6">
-          O que nossos clientes dizem?
-        </h2>
+      <h2 className="text-base md:text-3xl text-brand font-semibold mb-6 text-center">
+        O que nossos clientes dizem?
+      </h2>
 
-        <div className="overflow-hidden">
-          <motion.div
-            ref={trackRef}
-            className="flex items-stretch"
-            animate={
-              inView && singleWidth ? { x: [0, -singleWidth] } : { x: 0 }
-            }
-            transition={{ repeat: Infinity, ease: "linear", duration }}
-            style={{ willChange: "transform" }}
-          >
-            <div data-group="first" className="flex gap-6">
-              {REVIEWS.map((r) => (
-                <article
-                  key={r.id}
-                  className="w-fit bg-background border rounded-xl shadow-md p-6 flex-shrink-0"
-                >
-                  <div className="flex items-center justify-between mb-3">
-                    <div className="font-medium">{r.name}</div>
-                    <div className="text-yellow-500">
-                      {Array.from({ length: r.rating }).map((_, i) => (
-                        <span key={i}>★</span>
-                      ))}
-                    </div>
-                  </div>
-                  <p className="text-sm text-foreground">{r.text}</p>
-                </article>
-              ))}
-            </div>
-          </motion.div>
+      <div className="w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          {REVIEWS.map((r) => (
+            <article
+              key={r.id}
+              className="bg-background border rounded-xl shadow-md p-6"
+            >
+              <div className="flex items-center justify-between mb-3">
+                <div className="font-medium">{r.name}</div>
+                <div className="text-yellow-500">
+                  {Array.from({ length: r.rating }).map((_, i) => (
+                    <span key={i}>★</span>
+                  ))}
+                </div>
+              </div>
+              <p className="text-sm text-foreground">{r.text}</p>
+            </article>
+          ))}
         </div>
       </div>
     </motion.section>

@@ -12,14 +12,14 @@ export const SectionOne = ({ id }: SectionOneProps) => {
   return (
     <motion.section
       id={id}
-      className="flex items-center justify-center  gap-x-8 h-dvh"
+      className="flex px-2 pt-[150px] md:pt-0 md:px-0 flex-col md:flex-row items-center justify-center gap-x-8 md:h-dvh"
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.25 }}
       transition={{ duration: 0.8 }}
     >
-      <div className="space-y-8">
-        <h1 className="text-2xl text-start font-medium">
+      <div className="space-y-8 flex items-center flex-col">
+        <h1 className="text-base md:text-2xl text-start font-medium">
           Soluções tecnológicas que transformam sua empresa e{" "}
           <span className="text-brand">potencializam seus resultados.</span>
         </h1>
@@ -30,7 +30,9 @@ export const SectionOne = ({ id }: SectionOneProps) => {
         </p>
         <Button size={"lg"}>Fale conosco</Button>
       </div>
-      <VSCode />
+      <div className="hidden md:flex">
+        <VSCode />
+      </div>
     </motion.section>
   );
 };

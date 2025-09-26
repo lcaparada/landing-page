@@ -1,6 +1,9 @@
 import * as React from "react";
 
-export function Logo({ size }: { size: number }) {
+export function Logo({
+  size,
+  className,
+}: { size?: number } & React.ComponentProps<"svg">) {
   return (
     <svg
       width={size}
@@ -8,6 +11,7 @@ export function Logo({ size }: { size: number }) {
       viewBox="0 0 380 380"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className={className}
     >
       <rect x={2.5} y={2.5} width={375} height={375} rx={13.5} fill="#000" />
       <rect

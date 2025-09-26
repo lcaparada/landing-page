@@ -29,7 +29,7 @@ const ActionButton = ({ className }: React.ComponentProps<"div">) => {
 
 const TabVSCode = ({ tabName }: { tabName: string }) => {
   return (
-    <div className="text-white relative overflow-hidden p-2 ml-3 rounded-tr-md rounded-tl-md items-center gap-x-8 flex w-fit bg-vs-code-1 font-medium">
+    <div className="text-white relative overflow-hidden p-2 ml-3 rounded-tr-md rounded-tl-md items-center gap-x-8 flex w-full bg-vs-code-1 font-medium">
       <div className="h-[1px] right-0 left-0 w-full bg-brand absolute top-0" />
       {tabName}
       <X size={16} className="cursor-pointer" />

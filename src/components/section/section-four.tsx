@@ -43,13 +43,13 @@ export const SectionFour = ({ id }: SectionFourProps) => {
   return (
     <motion.section
       id={id}
-      className="flex items-center flex-col justify-center  gap-y-8 h-dvh"
+      className="flex items-center flex-col justify-center gap-y-8 md:h-dvh"
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.25 }}
       transition={{ duration: 0.8 }}
     >
-      <h2 className="text-3xl text-brand font-semibold mb-6">
+      <h2 className="text-lg md:text-3xl text-brand font-semibold">
         Principais projetos que desenvolvemos
       </h2>
       <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -70,9 +70,7 @@ type ProjectCardProps = {
 export const ProjectCard = ({ label, description, logo }: ProjectCardProps) => {
   return (
     <article className="w-full transition-transform transform hover:scale-105 cursor-pointer overflow-hidden bg-background border rounded-xl shadow-md">
-      <div className="p-6 h-[150px] flex items-center justify-center">
-        {logo}
-      </div>
+      <div className="p-6 flex items-center justify-center">{logo}</div>
       <div className="p-6 border-t">
         <p className="text-brand font-semibold">{label}</p>
         <span className="text-base">{description}</span>

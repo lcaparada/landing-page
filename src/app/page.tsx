@@ -16,7 +16,7 @@ const slugify = (s: string) =>
 
 export default function Home() {
   return (
-    <main className="w-full">
+    <main className="w-full space-y-40 pb-6">
       <SectionOne id={slugify("Início")} />
       <SectionTwo id={slugify("Sobre")} />
       <SectionThree id={slugify("Avaliações")} />

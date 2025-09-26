@@ -64,13 +64,13 @@ export const SectionFive = ({ id }: { id: string }) => {
   return (
     <motion.section
       id={id}
-      className="flex flex-col items-center justify-center gap-y-12 h-dvh"
+      className="flex flex-col items-center justify-center gap-y-12 md:h-dvh"
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.25 }}
       transition={{ duration: 0.8 }}
     >
-      <h2 className="text-3xl text-brand font-semibold">
+      <h2 className="text-lg md:text-3xl text-brand font-semibold">
         Nossos principais serviços
       </h2>
 
