@@ -22,12 +22,12 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" suppressHydrationWarning>
       <body
-        className={`${ibmPlexSans.className}  w-full px-2 md:px-52  bg-background text-foreground  antialiased`}
+        className={`${ibmPlexSans.className} dark w-full px-2 md:px-52  bg-background text-foreground  antialiased`}
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="dark"
+          enableSystem={false}
           disableTransitionOnChange
         >
           <NavBar />
