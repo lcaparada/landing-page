@@ -85,7 +85,6 @@ const Typewriter = ({
             clearInterval(intervalRef.current);
             intervalRef.current = null;
           }
-          // finished typing
           setIsTyping(false);
           if (onCompleteRef.current) onCompleteRef.current();
         }
@@ -144,7 +143,7 @@ const BodyVSCode = () => {
       <div className="w-full bg-vs-code-1 p-3 font-mono text-sm text-white">
         <CodeLine
           number={1}
-          text={`import { elevante_software } from 'concorrentes';`}
+          text={`import { elevante_software } from 'mercado';`}
           delay={500}
         />
         <CodeLine number={2} text={""} delay={2000} />
